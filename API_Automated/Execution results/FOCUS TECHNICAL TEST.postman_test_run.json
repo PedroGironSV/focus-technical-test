@@ -1,0 +1,312 @@
+{
+	"id": "6f13b0c8-f478-478b-ae99-f323fb7a6e01",
+	"name": "FOCUS TECHNICAL TEST",
+	"timestamp": "2023-01-18T20:28:17.640Z",
+	"collection_id": "18203100-aad4de2b-ddf9-4948-b638-962a210456da",
+	"folder_id": 0,
+	"environment_id": "18203100-08f095a9-ec2a-4e06-86c5-a750ca3d4926",
+	"totalPass": 24,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "466e36ad-af49-4661-a585-0bd6cf65b0ef",
+			"name": "VALIDATE ALL USERS",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 165,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"GET VALIDATE ALL USERS - Validate success status code": true,
+				"GET VALIDATE ALL USERS - Validate responset time is below 500ms": true,
+				"GET VALIDATE ALL USERS - Validate user's array is not empty": true,
+				"GET VALIDATE ALL USERS - Validate there are 100 users in response": true
+			},
+			"testPassFailCounts": {
+				"GET VALIDATE ALL USERS - Validate success status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE ALL USERS - Validate responset time is below 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE ALL USERS - Validate user's array is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE ALL USERS - Validate there are 100 users in response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"GET VALIDATE ALL USERS - Validate success status code": true,
+					"GET VALIDATE ALL USERS - Validate responset time is below 500ms": true,
+					"GET VALIDATE ALL USERS - Validate user's array is not empty": true,
+					"GET VALIDATE ALL USERS - Validate there are 100 users in response": true
+				}
+			]
+		},
+		{
+			"id": "cbc922ae-40e0-4b2a-9cad-6d171be2a963",
+			"name": "VALIDATE SPECIFIC USER",
+			"url": "https://jsonplaceholder.typicode.com/posts/25",
+			"time": 110,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"GET VALIDATE SPECIFIC USER - Validate success status code": true,
+				"GET VALIDATE SPECIFIC USER - Validate responset time is below 500ms": true,
+				"GET VALIDATE SPECIFIC USER - Validate userId is a number": true,
+				"GET VALIDATE SPECIFIC USER - Validate id is a number": true,
+				"GET VALIDATE SPECIFIC USER - Validate title is a string": true,
+				"GET VALIDATE SPECIFIC USER - Validate id is a string": true
+			},
+			"testPassFailCounts": {
+				"GET VALIDATE SPECIFIC USER - Validate success status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE SPECIFIC USER - Validate responset time is below 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE SPECIFIC USER - Validate userId is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE SPECIFIC USER - Validate id is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE SPECIFIC USER - Validate title is a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"GET VALIDATE SPECIFIC USER - Validate id is a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				110
+			],
+			"allTests": [
+				{
+					"GET VALIDATE SPECIFIC USER - Validate success status code": true,
+					"GET VALIDATE SPECIFIC USER - Validate responset time is below 500ms": true,
+					"GET VALIDATE SPECIFIC USER - Validate userId is a number": true,
+					"GET VALIDATE SPECIFIC USER - Validate id is a number": true,
+					"GET VALIDATE SPECIFIC USER - Validate title is a string": true,
+					"GET VALIDATE SPECIFIC USER - Validate id is a string": true
+				}
+			]
+		},
+		{
+			"id": "13a3542c-2109-4fdf-936a-6e506158f9de",
+			"name": "CREATE NEW USER",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 113,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"POST CREATE NEW USER - Validate success status code": true,
+				"POST CREATE NEW USER - Validate responset time is below 500ms": true,
+				"POST CREATE NEW USER - Validate userId :: 12": true,
+				"POST CREATE NEW USER - Validate id :: 101": true,
+				"POST CREATE NEW USER - Validate title :: FOCUS TECHNICAL TEST": true
+			},
+			"testPassFailCounts": {
+				"POST CREATE NEW USER - Validate success status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"POST CREATE NEW USER - Validate responset time is below 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"POST CREATE NEW USER - Validate userId :: 12": {
+					"pass": 1,
+					"fail": 0
+				},
+				"POST CREATE NEW USER - Validate id :: 101": {
+					"pass": 1,
+					"fail": 0
+				},
+				"POST CREATE NEW USER - Validate title :: FOCUS TECHNICAL TEST": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				113
+			],
+			"allTests": [
+				{
+					"POST CREATE NEW USER - Validate success status code": true,
+					"POST CREATE NEW USER - Validate responset time is below 500ms": true,
+					"POST CREATE NEW USER - Validate userId :: 12": true,
+					"POST CREATE NEW USER - Validate id :: 101": true,
+					"POST CREATE NEW USER - Validate title :: FOCUS TECHNICAL TEST": true
+				}
+			]
+		},
+		{
+			"id": "9a735ad2-57df-4fdd-b4fc-2ba16f593e95",
+			"name": "UPDATE ALL USER DATA",
+			"url": "https://jsonplaceholder.typicode.com/posts/90",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PUT UPDATE ALL USER DATA - Validate success status code": true,
+				"PUT UPDATE ALL USER DATA - Validate responset time is below 500ms": true,
+				"PUT UPDATE ALL USER DATA - Validate id :: 90": true,
+				"PUT UPDATE ALL USER DATA - Validate body :: Testing the body update of an user": true
+			},
+			"testPassFailCounts": {
+				"PUT UPDATE ALL USER DATA - Validate success status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PUT UPDATE ALL USER DATA - Validate responset time is below 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PUT UPDATE ALL USER DATA - Validate id :: 90": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PUT UPDATE ALL USER DATA - Validate body :: Testing the body update of an user": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				95
+			],
+			"allTests": [
+				{
+					"PUT UPDATE ALL USER DATA - Validate success status code": true,
+					"PUT UPDATE ALL USER DATA - Validate responset time is below 500ms": true,
+					"PUT UPDATE ALL USER DATA - Validate id :: 90": true,
+					"PUT UPDATE ALL USER DATA - Validate body :: Testing the body update of an user": true
+				}
+			]
+		},
+		{
+			"id": "4ed94102-71aa-46a2-927e-117ac8f1945a",
+			"name": "UPDATE PARTIAL USER DATA",
+			"url": "https://jsonplaceholder.typicode.com/posts/90",
+			"time": 130,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PATCH UPDATE PARTIAL USER DATA - Validate success status code": true,
+				"PATCH UPDATE PARTIAL USER DATA - Validate responset time is below 500ms": true,
+				"PATCH UPDATE PARTIAL USER DATA - Validate body :: Testing the patch method": true
+			},
+			"testPassFailCounts": {
+				"PATCH UPDATE PARTIAL USER DATA - Validate success status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PATCH UPDATE PARTIAL USER DATA - Validate responset time is below 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"PATCH UPDATE PARTIAL USER DATA - Validate body :: Testing the patch method": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				130
+			],
+			"allTests": [
+				{
+					"PATCH UPDATE PARTIAL USER DATA - Validate success status code": true,
+					"PATCH UPDATE PARTIAL USER DATA - Validate responset time is below 500ms": true,
+					"PATCH UPDATE PARTIAL USER DATA - Validate body :: Testing the patch method": true
+				}
+			]
+		},
+		{
+			"id": "37fa5faa-0237-40e2-8dd2-f3922d07678f",
+			"name": "DELETE USER",
+			"url": "https://jsonplaceholder.typicode.com/posts/90",
+			"time": 98,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"DELETE DELETE USER - Validate success status code": true,
+				"DELETE DELETE USER - Validate responset time is below 500ms": true
+			},
+			"testPassFailCounts": {
+				"DELETE DELETE USER - Validate success status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"DELETE DELETE USER - Validate responset time is below 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				98
+			],
+			"allTests": [
+				{
+					"DELETE DELETE USER - Validate success status code": true,
+					"DELETE DELETE USER - Validate responset time is below 500ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 711,
+	"collection": {
+		"requests": [
+			{
+				"id": "466e36ad-af49-4661-a585-0bd6cf65b0ef",
+				"method": "GET"
+			},
+			{
+				"id": "cbc922ae-40e0-4b2a-9cad-6d171be2a963",
+				"method": "GET"
+			},
+			{
+				"id": "13a3542c-2109-4fdf-936a-6e506158f9de",
+				"method": "POST"
+			},
+			{
+				"id": "9a735ad2-57df-4fdd-b4fc-2ba16f593e95",
+				"method": "PUT"
+			},
+			{
+				"id": "4ed94102-71aa-46a2-927e-117ac8f1945a",
+				"method": "PATCH"
+			},
+			{
+				"id": "37fa5faa-0237-40e2-8dd2-f3922d07678f",
+				"method": "DELETE"
+			}
+		]
+	}
+}

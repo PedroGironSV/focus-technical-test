@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "2c12f759-46e2-43f1-883d-23a89ff11773",
+		"name": "FOCUS TECHNICAL TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23157312"
+	},
+	"item": [
+		{
+			"name": "VALIDATE ALL USERS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var users = pm.response.json();\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate user's array is not empty\", function () {\r",
+							"    pm.expect(users.length > 0);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate there are 100 users in response\", function () {\r",
+							"    pm.expect(users.length).to.equal(100);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{all_users}}",
+					"host": [
+						"{{all_users}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VALIDATE SPECIFIC USER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var specificUser = pm.response.json();\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate userId is a number\", function () {\r",
+							"    pm.expect(specificUser.userId).to.be.a(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id is a number\", function () {\r",
+							"    pm.expect(specificUser.id).to.be.a(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate title is a string\", function () {\r",
+							"    pm.expect(specificUser.title).to.be.a(\"string\");\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id is a string\", function () {\r",
+							"    pm.expect(specificUser.body).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"id\", 25);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{specific_user}}",
+					"host": [
+						"{{specific_user}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW USER",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"id\", 101);\r",
+							"pm.globals.set(\"title\", \"FOCUS TECHNICAL TEST\");\r",
+							"pm.globals.set(\"body\", \"Testing the creation of a new user\");\r",
+							"pm.globals.set(\"userId\", 12);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var createdUser = pm.response.json();\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate userId :: \"+ pm.globals.get(\"userId\"), function () {\r",
+							"    pm.expect(createdUser.userId).to.be.equal(pm.globals.get(\"userId\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id :: \"+ pm.globals.get(\"id\"), function () {\r",
+							"    pm.expect(createdUser.id).to.be.equal(pm.globals.get(\"id\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate title :: \"+ pm.globals.get(\"title\"), function () {\r",
+							"    pm.expect(createdUser.title).to.be.equal(pm.globals.get(\"title\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{id}},\r\n    \"title\": \"{{title}}\",\r\n    \"body\": \"{{body}}\",\r\n    \"userId\": {{userId}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{all_users}}",
+					"host": [
+						"{{all_users}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ALL USER DATA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var createdUser = pm.response.json();\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate id :: \"+ pm.globals.get(\"id\"), function () {\r",
+							"    pm.expect(createdUser.id).to.be.equal(pm.globals.get(\"id\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate body :: \"+ pm.globals.get(\"updatedBody\"), function () {\r",
+							"    pm.expect(createdUser.body).to.be.equal(pm.globals.get(\"updatedBody\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"id\", 90);\r",
+							"pm.globals.set(\"updatedBody\", \"Testing the body update of an user\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{id}},\r\n    \"title\": \"{{title}}\",\r\n    \"body\": \"{{updatedBody}}\",\r\n    \"userId\": {{userId}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{specific_user}}",
+					"host": [
+						"{{specific_user}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PARTIAL USER DATA",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"patchBody\", \"Testing the patch method\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var createdUser = pm.response.json();\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate body :: \"+ pm.globals.get(\"patchBody\"), function () {\r",
+							"    pm.expect(createdUser.body).to.be.equal(pm.globals.get(\"patchBody\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"{{title}}\",\r\n    \"body\": \"{{patchBody}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{specific_user}}",
+					"host": [
+						"{{specific_user}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate success status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{specific_user}}",
+					"host": [
+						"{{specific_user}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
