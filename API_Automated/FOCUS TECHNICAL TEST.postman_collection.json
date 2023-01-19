@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "2c12f759-46e2-43f1-883d-23a89ff11773",
+		"_postman_id": "a9a15538-fe1d-4f25-82b3-001c8db452b3",
 		"name": "FOCUS TECHNICAL TEST",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "23157312"
+		"_exporter_id": "18203100"
 	},
 	"item": [
 		{
@@ -20,7 +20,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 							"});\r",
 							"\r",
@@ -61,7 +61,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 							"});\r",
 							"\r",
@@ -131,7 +131,7 @@
 							"    pm.response.to.have.status(201);\r",
 							"});\r",
 							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 							"});\r",
 							"\r",
@@ -185,7 +185,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 							"});\r",
 							"\r",
@@ -254,7 +254,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 							"});\r",
 							"\r",
@@ -298,7 +298,7 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"pm.test(pm.request.method + \" \" + request.name + \" - Validate responset time is below 500ms\", function () {\r",
+							"pm.test(pm.request.method + \" \" + request.name + \" - Validate response time is below 500ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 							"});"
 						],
