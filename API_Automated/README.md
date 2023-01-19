@@ -10,7 +10,6 @@ Is a Postman collection to automate and validate the APIs as the part II of the 
 
 ```
 https://github.com/PedroGironSV/focus-technical-test.git
-
 ```
 
  
