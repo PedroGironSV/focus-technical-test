@@ -18,7 +18,7 @@
 
 **Clone the repo**
 
-    https://github.com/PedroGironSV/focus-technical-test.git
+    git clone https://github.com/PedroGironSV/focus-technical-test.git
 
 **Execute the script**
  - Import the project 'TechnicalTest' to the IDE
