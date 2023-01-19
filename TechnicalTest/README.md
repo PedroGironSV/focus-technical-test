@@ -25,8 +25,10 @@ Is a script to automate the manual validation of the Focus Services web page as 
  - Navigate to 'automation' package
  - Select the TestNG class: 'TestExecution.java'
 ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBsVYIvF1maL5Uv7QWz_oubkOOWKIIQPme2jjXx9RU1r3YIIC9kMSJ-2F7cFqZNbzua9m1b7tPhWVSlTZkF4ji426znyvBxqPBEGJ5_eErFOnG4mD7x3PmEmKBHWFIHIj7cpm_M2Xn5DWSJBkVhqzJCLrY4tZLmdpt1N4z1VBlUCN5Om3vJn7tRsF0IA/s328/automated_script1.PNG)
+
  - Right click and go to 'Run as'
  - Click on 'TestNG test'
+
  ![enter image description here](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTtUUJIB_jIk2xegvykckoqhJpMQTYgMV_iiOg6AH6DU8UUS2xWS0kzeibFeBGPROKOzpvGizwTISFCuq3j6X-KSpuLWsubAKJAf0_lGCnJp2dWRL1j_XEVgdH2LbyZwmqEgsWFupFtkxc2o0dC373liXOqiZBzvUhhDQ--tj4PaWOwgWn_QfWA8_idQ/s831/automated_script2.PNG)
 
  - Wait for the IDE install the dependencies and start with the script execution.
