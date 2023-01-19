@@ -1,5 +1,6 @@
 ﻿**Focus Page Script Automated**
-Is a script to automate the manual validation of the Focus Services web page as the part I of the Technical Test.
+ 
+ Is a script to automate the manual validation of the Focus Services web page as the part I of the Technical Test.
 
 **Local configuration requeriments**
 
